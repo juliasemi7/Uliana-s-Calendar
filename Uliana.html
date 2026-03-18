@@ -104,49 +104,56 @@
             background-color: #f0f4ff;
         }
         
-        /* Очень светлый и чистый бежевый цвет без серого */
         .calendar td.weekend {
             color: #e74c3c;
             font-weight: 600;
-            background-color: #FFF9F0; /* Очень светлый чистый бежевый */
+            background-color: #FFF9F0;
         }
         
-        /* Первый пакет 20 дней (январь-февраль) - светло-зеленый */
-        .calendar td.package-20day-1 {
-            background-color: rgba(144, 238, 144, 0.4); /* Светло-зеленый - LightGreen */
+        .calendar td.package-20day-jan {
+            background-color: rgba(144, 238, 144, 0.4);
             font-weight: 600;
             color: #2c3e50;
         }
         
-        /* Второй пакет 20 дней (февраль-март) - ФИОЛЕТОВЫЙ */
-        .calendar td.package-20day-2 {
-            background-color: rgba(216, 191, 216, 0.5); /* Фиолетовый - Thistle */
+        .calendar td.package-20day-feb {
+            background-color: rgba(216, 191, 216, 0.5);
             font-weight: 600;
             color: #2c3e50;
         }
         
-        /* Синяя обводка для занятий Ульяны */
+        .calendar td.package-20day-mar {
+            background-color: rgba(255, 218, 185, 0.6);
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
         .calendar td.package-uliana {
             font-weight: 700;
             color: #2c3e50;
-            border: 2px solid #1e6bb8; /* Темный синий для обводки */
+            border: 2px solid #1e6bb8;
             background-color: white;
         }
         
-        /* Комбинация для дней с обоими событиями (первый пакет + Ульяна) */
-        .calendar td.both-packages-1 {
-            background-color: rgba(144, 238, 144, 0.4); /* Светло-зеленый фон */
+        .calendar td.both-packages-jan {
+            background-color: rgba(144, 238, 144, 0.4);
             font-weight: 700;
             color: #2c3e50;
-            border: 2px solid #1e6bb8; /* Темный синий для обводки */
+            border: 2px solid #1e6bb8;
         }
         
-        /* Комбинация для дней с обоими событиями (второй пакет + Ульяна) */
-        .calendar td.both-packages-2 {
-            background-color: rgba(216, 191, 216, 0.5); /* Фиолетовый фон */
+        .calendar td.both-packages-feb {
+            background-color: rgba(216, 191, 216, 0.5);
             font-weight: 700;
             color: #2c3e50;
-            border: 2px solid #1e6bb8; /* Темный синий для обводки */
+            border: 2px solid #1e6bb8;
+        }
+        
+        .calendar td.both-packages-mar {
+            background-color: rgba(255, 218, 185, 0.6);
+            font-weight: 700;
+            color: #2c3e50;
+            border: 2px solid #1e6bb8;
         }
         
         .calendar td.other-month {
@@ -163,7 +170,7 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-            max-width: 1000px;
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -188,33 +195,43 @@
         }
         
         .weekend-color {
-            background-color: #FFF9F0; /* Очень светлый чистый бежевый */
+            background-color: #FFF9F0;
             border: 1px solid #e74c3c;
         }
         
-        .package-20day-1-color {
-            background-color: rgba(144, 238, 144, 0.4); /* Светло-зеленый */
+        .package-20day-jan-color {
+            background-color: rgba(144, 238, 144, 0.4);
             border: 1px solid #90EE90;
         }
         
-        .package-20day-2-color {
-            background-color: rgba(216, 191, 216, 0.5); /* Фиолетовый */
+        .package-20day-feb-color {
+            background-color: rgba(216, 191, 216, 0.5);
             border: 1px solid #D8BFD8;
+        }
+        
+        .package-20day-mar-color {
+            background-color: rgba(255, 218, 185, 0.6);
+            border: 1px solid #FFDAB9;
         }
         
         .package-uliana-color {
             background-color: white;
-            border: 2px solid #1e6bb8; /* Темный синий */
+            border: 2px solid #1e6bb8;
         }
         
-        .both-packages-1-color {
-            background-color: rgba(144, 238, 144, 0.4); /* Светло-зеленый */
-            border: 2px solid #1e6bb8; /* Темный синий */
+        .both-packages-jan-color {
+            background-color: rgba(144, 238, 144, 0.4);
+            border: 2px solid #1e6bb8;
         }
         
-        .both-packages-2-color {
-            background-color: rgba(216, 191, 216, 0.5); /* Фиолетовый */
-            border: 2px solid #1e6bb8; /* Темный синий */
+        .both-packages-feb-color {
+            background-color: rgba(216, 191, 216, 0.5);
+            border: 2px solid #1e6bb8;
+        }
+        
+        .both-packages-mar-color {
+            background-color: rgba(255, 218, 185, 0.6);
+            border: 2px solid #1e6bb8;
         }
         
         footer {
@@ -224,37 +241,6 @@
             border-top: 1px solid #ddd;
             color: #777;
             font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .calendar-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 20px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .legend {
-                flex-direction: column;
-                align-items: center;
-                gap: 15px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .calendar-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            body {
-                padding: 10px;
-            }
-            
-            .container {
-                padding: 10px;
-            }
         }
     </style>
 </head>
@@ -266,35 +252,17 @@
         </header>
         
         <main>
-            <div class="calendar-grid" id="calendar-container">
-                <!-- Календари месяцев будут вставлены здесь -->
-            </div>
+            <div class="calendar-grid" id="calendar-container"></div>
             
             <div class="legend">
-                <div class="legend-item">
-                    <div class="legend-color weekend-color"></div>
-                    <span>Выходные дни</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color package-20day-1-color"></div>
-                    <span>Пакет 20 дней (январь-февраль)</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color package-20day-2-color"></div>
-                    <span>Пакет 20 дней (февраль-март)</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-border package-uliana-color"></div>
-                    <span>Занятие Ульяны</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-border both-packages-1-color"></div>
-                    <span>Оба события (1-й пакет + Ульяна)</span>
-                </div>
-                <div class="legend-item">
-                    <div class="legend-border both-packages-2-color"></div>
-                    <span>Оба события (2-й пакет + Ульяна)</span>
-                </div>
+                <div class="legend-item"><div class="legend-color weekend-color"></div><span>Выходные дни</span></div>
+                <div class="legend-item"><div class="legend-color package-20day-jan-color"></div><span>Пакет 20 дней (январь-февраль)</span></div>
+                <div class="legend-item"><div class="legend-color package-20day-feb-color"></div><span>Пакет 20 дней (февраль-март)</span></div>
+                <div class="legend-item"><div class="legend-color package-20day-mar-color"></div><span>Пакет 20 дней (март-апрель)</span></div>
+                <div class="legend-item"><div class="legend-border package-uliana-color"></div><span>Занятие Ульяны</span></div>
+                <div class="legend-item"><div class="legend-border both-packages-jan-color"></div><span>1-й пакет + Ульяна</span></div>
+                <div class="legend-item"><div class="legend-border both-packages-feb-color"></div><span>2-й пакет + Ульяна</span></div>
+                <div class="legend-item"><div class="legend-border both-packages-mar-color"></div><span>3-й пакет + Ульяна</span></div>
             </div>
         </main>
         
@@ -305,21 +273,12 @@
     </div>
 
     <script>
-        // Названия месяцев на русском
-        const monthNames = [
-            "Январь", "Февраль", "Март", "Апрель", 
-            "Май", "Июнь", "Июль", "Август", 
-            "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
-        ];
-        
-        // Названия дней недели на русском (сокращенные)
+        const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
         const dayNames = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"];
-        
-        // Год для календаря
         const year = 2026;
         
-        // ПЕРВЫЙ пакет из 20 рабочих дней (январь-февраль) - светло-зеленый
-        const package20Days1 = [
+        // ПЕРВЫЙ ПАКЕТ: 14 января - 10 февраля
+        const package20DaysJan = [
             "2026-01-14", "2026-01-15", "2026-01-16",
             "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23",
             "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30",
@@ -327,168 +286,132 @@
             "2026-02-09", "2026-02-10"
         ];
         
-        // ВТОРОЙ пакет из 20 рабочих дней (февраль-март) - ФИОЛЕТОВЫЙ
-        // Начинаем с 11 февраля - 20 рабочих дней
-        const package20Days2 = [
+        // ВТОРОЙ ПАКЕТ: 11 февраля - 10 марта
+        const package20DaysFeb = [
             "2026-02-11", "2026-02-12", "2026-02-13",
             "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20",
             "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27",
             "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06",
-            "2026-03-09", "2026-03-10", "2026-03-11"
+            "2026-03-09", "2026-03-10"
         ];
         
-        // Занятия Ульяны (среда и пятница) - всего 16 занятий (8+8)
+        // ТРЕТИЙ ПАКЕТ: 11 марта - 7 апреля
+        const package20DaysMar = [
+            "2026-03-11", "2026-03-12", "2026-03-13",
+            "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20",
+            "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27",
+            "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-03",
+            "2026-04-06", "2026-04-07"
+        ];
+        
+        // ЗАНЯТИЯ УЛЬЯНЫ - СРЕДА И ПЯТНИЦА
         const packageUliana = [
-            // Первые 8 занятий (в первом пакете)
-            "2026-01-14", "2026-01-16",
-            "2026-01-21", "2026-01-23",
-            "2026-01-28", "2026-01-30",
-            "2026-02-04", "2026-02-06",
+            // Первый пакет (январь-февраль)
+            "2026-01-14", "2026-01-16", "2026-01-21", "2026-01-23",
+            "2026-01-28", "2026-01-30", "2026-02-04", "2026-02-06",
             
-            // Следующие 8 занятий (во втором пакете)
-            "2026-02-11", "2026-02-13",
-            "2026-02-18", "2026-02-20",
-            "2026-02-25", "2026-02-27",
-            "2026-03-04", "2026-03-06"
+            // Второй пакет (февраль-март)
+            "2026-02-11", "2026-02-13", "2026-02-18", "2026-02-20",
+            "2026-02-25", "2026-02-27", "2026-03-04", "2026-03-06",
+            
+            // Третий пакет (март-апрель)
+            "2026-03-11", "2026-03-13", "2026-03-18", "2026-03-20",
+            "2026-03-25", "2026-03-27", "2026-04-01", "2026-04-03"
         ];
         
-        // Функция для получения количества дней в месяце
         function getDaysInMonth(year, month) {
             return new Date(year, month + 1, 0).getDate();
         }
         
-        // Функция для получения дня недели первого дня месяца (0 - воскресенье, 1 - понедельник и т.д.)
         function getFirstDayOfMonth(year, month) {
             const firstDay = new Date(year, month, 1).getDay();
-            // Преобразуем воскресенье (0) в 6, чтобы неделя начиналась с понедельника
             return firstDay === 0 ? 6 : firstDay - 1;
         }
         
-        // Функция для форматирования даты в формате YYYY-MM-DD
         function formatDate(year, month, day) {
             return `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
         }
         
-        // Функция для проверки, входит ли дата в первый пакет из 20 дней
-        function isInPackage20Days1(year, month, day) {
-            const dateStr = formatDate(year, month, day);
-            return package20Days1.includes(dateStr);
+        function isInPackage20DaysJan(year, month, day) {
+            return package20DaysJan.includes(formatDate(year, month, day));
         }
         
-        // Функция для проверки, входит ли дата во второй пакет из 20 дней
-        function isInPackage20Days2(year, month, day) {
-            const dateStr = formatDate(year, month, day);
-            return package20Days2.includes(dateStr);
+        function isInPackage20DaysFeb(year, month, day) {
+            return package20DaysFeb.includes(formatDate(year, month, day));
         }
         
-        // Функция для проверки, входит ли дата в занятия Ульяны
+        function isInPackage20DaysMar(year, month, day) {
+            return package20DaysMar.includes(formatDate(year, month, day));
+        }
+        
         function isInPackageUliana(year, month, day) {
-            const dateStr = formatDate(year, month, day);
-            return packageUliana.includes(dateStr);
+            return packageUliana.includes(formatDate(year, month, day));
         }
         
-        // Функция для создания календаря на месяц
         function createMonthCalendar(year, month) {
             const daysInMonth = getDaysInMonth(year, month);
             const firstDayIndex = getFirstDayOfMonth(year, month);
             
-            // Создаем таблицу для календаря
-            let calendarHTML = `<div class="month-container">
-                <div class="month-header">${monthNames[month]} ${year}</div>
-                <table class="calendar">
-                    <thead>
-                        <tr>`;
+            let html = `<div class="month-container"><div class="month-header">${monthNames[month]} ${year}</div><table class="calendar"><thead><tr>`;
             
-            // Добавляем заголовки дней недели
             for (let day of dayNames) {
                 const isWeekend = day === "Сб" || day === "Вс";
-                calendarHTML += `<th${isWeekend ? ' style="color:#e74c3c;"' : ''}>${day}</th>`;
+                html += `<th${isWeekend ? ' style="color:#e74c3c;"' : ''}>${day}</th>`;
             }
             
-            calendarHTML += `</tr>
-                    </thead>
-                    <tbody>`;
+            html += `</tr></thead><tbody>`;
             
             let dayCounter = 1;
             
-            // Создаем 6 строк для календаря (максимально возможное количество недель в месяце)
             for (let week = 0; week < 6; week++) {
-                calendarHTML += "<tr>";
+                html += "<tr>";
                 
-                // Заполняем каждую неделю (7 дней)
                 for (let dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++) {
-                    // Если это первая неделя и день меньше первого дня месяца
                     if (week === 0 && dayOfWeek < firstDayIndex) {
-                        // Добавляем пустые ячейки для дней из предыдущего месяца
                         const prevMonthDays = getDaysInMonth(year, month - 1);
                         const prevMonthDay = prevMonthDays - (firstDayIndex - dayOfWeek - 1);
-                        calendarHTML += `<td class="other-month">${prevMonthDay}</td>`;
-                    } 
-                    // Если все дни месяца уже добавлены
-                    else if (dayCounter > daysInMonth) {
-                        // Добавляем дни из следующего месяца
+                        html += `<td class="other-month">${prevMonthDay}</td>`;
+                    } else if (dayCounter > daysInMonth) {
                         const nextMonthDay = dayCounter - daysInMonth;
-                        calendarHTML += `<td class="other-month">${nextMonthDay}</td>`;
+                        html += `<td class="other-month">${nextMonthDay}</td>`;
                         dayCounter++;
-                    } 
-                    // Добавляем текущий день месяца
-                    else {
-                        const isWeekend = dayOfWeek === 5 || dayOfWeek === 6; // 5 = суббота, 6 = воскресенье
-                        const inPackage20Days1 = isInPackage20Days1(year, month, dayCounter);
-                        const inPackage20Days2 = isInPackage20Days2(year, month, dayCounter);
-                        const inPackageUliana = isInPackageUliana(year, month, dayCounter);
+                    } else {
+                        const isWeekend = dayOfWeek === 5 || dayOfWeek === 6;
+                        const inJan = isInPackage20DaysJan(year, month, dayCounter);
+                        const inFeb = isInPackage20DaysFeb(year, month, dayCounter);
+                        const inMar = isInPackage20DaysMar(year, month, dayCounter);
+                        const inUliana = isInPackageUliana(year, month, dayCounter);
                         
-                        let dayClass = "";
-                        if (isWeekend) dayClass += " weekend";
+                        let dayClass = isWeekend ? " weekend" : "";
                         
-                        // Проверяем комбинации событий
-                        if (inPackage20Days1 && inPackageUliana) {
-                            dayClass += " both-packages-1";
-                        } else if (inPackage20Days2 && inPackageUliana) {
-                            dayClass += " both-packages-2";
-                        } else if (inPackage20Days1) {
-                            dayClass += " package-20day-1";
-                        } else if (inPackage20Days2) {
-                            dayClass += " package-20day-2";
-                        } else if (inPackageUliana) {
-                            dayClass += " package-uliana";
-                        }
+                        if (inJan && inUliana) dayClass += " both-packages-jan";
+                        else if (inFeb && inUliana) dayClass += " both-packages-feb";
+                        else if (inMar && inUliana) dayClass += " both-packages-mar";
+                        else if (inJan) dayClass += " package-20day-jan";
+                        else if (inFeb) dayClass += " package-20day-feb";
+                        else if (inMar) dayClass += " package-20day-mar";
+                        else if (inUliana) dayClass += " package-uliana";
                         
-                        calendarHTML += `<td class="${dayClass}">${dayCounter}</td>`;
+                        html += `<td class="${dayClass}">${dayCounter}</td>`;
                         dayCounter++;
                     }
                 }
                 
-                calendarHTML += "</tr>";
-                
-                // Если все дни месяца добавлены, прекращаем создание строк
-                if (dayCounter > daysInMonth) {
-                    // Проверяем, не добавили ли мы уже все дни следующего месяца
-                    const remainingCells = 7 - (dayCounter - daysInMonth - 1);
-                    if (remainingCells < 7) {
-                        break;
-                    }
-                }
+                html += "</tr>";
+                if (dayCounter > daysInMonth) break;
             }
             
-            calendarHTML += `</tbody>
-                </table>
-            </div>`;
-            
-            return calendarHTML;
+            html += `</tbody></table></div>`;
+            return html;
         }
         
-        // Функция для создания календаря на весь год
         function createYearCalendar() {
-            const calendarContainer = document.getElementById("calendar-container");
-            
-            // Создаем календарь для каждого месяца
+            const container = document.getElementById("calendar-container");
             for (let month = 0; month < 12; month++) {
-                calendarContainer.innerHTML += createMonthCalendar(year, month);
+                container.innerHTML += createMonthCalendar(year, month);
             }
         }
         
-        // Создаем календарь при загрузке страницы
         document.addEventListener("DOMContentLoaded", createYearCalendar);
     </script>
 </body>
