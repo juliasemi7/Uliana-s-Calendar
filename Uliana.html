@@ -110,14 +110,12 @@
             background-color: #FFF9F0;
         }
 
-        /* пакеты */
         .calendar td.package-1 { background-color: rgba(144, 238, 144, 0.4); font-weight: 600; }
         .calendar td.package-2 { background-color: rgba(216, 191, 216, 0.6); font-weight: 600; }
         .calendar td.package-3 { background-color: rgba(255, 218, 185, 0.6); font-weight: 600; }
         .calendar td.package-4 { background-color: rgba(64, 224, 208, 0.4); font-weight: 600; }
         .calendar td.package-5 { background-color: rgba(255, 160, 122, 0.5); font-weight: 600; }
 
-        /* занятия */
         .calendar td.package-uliana {
             font-weight: 700;
             border: 2px solid #1e6bb8;
@@ -255,13 +253,13 @@
             "2026-04-06","2026-04-07"
         ];
 
-        // Пакет 4: 08.04 – 05.05
+        // Пакет 4: 08.04 – 06.05 (продлён, включает 6 мая)
         const package4 = [
             "2026-04-08","2026-04-09","2026-04-10",
             "2026-04-13","2026-04-14","2026-04-15","2026-04-16","2026-04-17",
             "2026-04-20","2026-04-21","2026-04-22","2026-04-23","2026-04-24",
             "2026-04-27","2026-04-28","2026-04-29","2026-04-30",
-            "2026-05-04","2026-05-05"
+            "2026-05-04","2026-05-05","2026-05-06"
         ];
 
         // Пакет 5: 08.05 – 03.06 (коралловый, 20 дней)
@@ -274,6 +272,7 @@
         ];
 
         // Занятия Ульяны (среда + пятница) — 8 занятий в каждом пакете
+        // 1 мая (пт) убрано, добавлено 6 мая (ср)
         const lessons = [
             // пакет 1
             "2026-01-14","2026-01-16","2026-01-21","2026-01-23",
@@ -284,9 +283,9 @@
             // пакет 3
             "2026-03-11","2026-03-13","2026-03-18","2026-03-20",
             "2026-03-25","2026-03-27","2026-04-01","2026-04-03",
-            // пакет 4
+            // пакет 4 (1 мая убрано, 6 мая добавлено)
             "2026-04-08","2026-04-10","2026-04-15","2026-04-17",
-            "2026-04-22","2026-04-24","2026-04-29","2026-05-01",
+            "2026-04-22","2026-04-24","2026-04-29","2026-05-06",
             // пакет 5 (8 занятий)
             "2026-05-08","2026-05-13","2026-05-15","2026-05-20",
             "2026-05-22","2026-05-27","2026-05-29","2026-06-03"
@@ -302,7 +301,7 @@
         function createMonthCalendar(y, m) {
             const daysInMonth = getDaysInMonth(y, m);
             const startOffset = getFirstDayOfMonth(y, m);
-            let html = `<div class="month-container"><div class="month-header">${monthNames[m]} ${y}</div><table class="calendar"><thead><tr>`;
+            let html = `<div class="month-container"><div class="month-header">${monthNames[m]} ${y}</div><table class="calendar"><thead></td>`;
             for (let wd of dayNames) {
                 const isW = (wd === "Сб" || wd === "Вс");
                 html += `<th${isW ? ' style="color:#e74c3c;"' : ''}>${wd}</th>`;
